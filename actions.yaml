@@ -1,0 +1,20 @@
+name: 'Create Nexus Staging Repo'
+description: 'Creates a new staging repo on https://oss.sonatype.org/'
+inputs:
+  username: 
+    description: 'Your Sonatype username, same the Sonatype Jira one'
+    required: true
+  password: 
+    description: 'Your Sonatype password, same the Sonatype Jira one'
+    required: true
+  staging-profile-id: 
+    description: 'Your staging profile ID. You can get it at https://oss.sonatype.org/#stagingProfiles;$staginProfileId'
+    required: true
+  base-url: 
+    description: 'The url of your nexus repository, defaults to OSSRH (https://oss.sonatype.org/service/local/)'
+outputs:
+  repository-id: 
+    description: 'The ID of the newly created staging repository'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
