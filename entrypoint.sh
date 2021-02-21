@@ -5,7 +5,9 @@ then
   INPUT_BASE_URL="https://oss.sonatype.org/service/local/"
 fi
 
-JSON=$(curl -d "{\"data\": {\"description\": \"$INPUT_DESCRIPTION\"}}" -u "$INPUT_USERNAME":"$INPUT_PASSWORD" ${INPUT_BASE_URL}staging/profiles/$INPUT_STAGING_PROFILE_ID/start  -H "Content-Type: application/json")
+STAGING_PROFILE_ID=$1
+
+JSON=$(curl -d "{\"data\": {\"description\": \"$INPUT_DESCRIPTION\"}}" -u "$INPUT_USERNAME":"$INPUT_PASSWORD" ${INPUT_BASE_URL}staging/profiles/${STAGING_PROFILE_ID}/start  -H "Content-Type: application/json")
 
 # TODO proper json parsing 😅
 REPOSITORY_ID=$(echo $JSON | sed 's/.*stagedRepositoryId":"\([^"]*\)".*/\1/g')
