@@ -7,14 +7,14 @@ inputs:
   password: 
     description: 'Your Sonatype password, same the Sonatype Jira one'
     required: true
-  staging-profile-id: 
+  staging_profile_id: 
     description: 'Your staging profile ID. You can get it at https://oss.sonatype.org/#stagingProfiles;$staginProfileId'
     required: true
   description: 
     description: 'A description to identify the newly created repository'
     required: false
     defaults: "Created with Github Actions"
-  base-url: 
+  base_url: 
     description: 'The url of your nexus repository, defaults to OSSRH (https://oss.sonatype.org/service/local/)'
     defaults: https://oss.sonatype.org/service/local/
 outputs:
@@ -23,5 +23,3 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.staging-profile-id }}
