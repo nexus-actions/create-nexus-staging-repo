@@ -8,7 +8,7 @@ fi
 
 jsonOutput=$(
   curl -s --request POST -u "$INPUT_USERNAME:$INPUT_PASSWORD" \
-    --url ${INPUT_BASE_URL}staging/profiles/"${STAGING_PROFILE_ID}"/start \
+    --url ${INPUT_BASE_URL}staging/profiles/"${INPUT_STAGING_PROFILE_ID}"/start \
     --header 'Accept: application/json' \
     --header 'Content-Type: application/json' \
     --data '{ "data": {"description" : "'"$INPUT_DESCRIPTION"'"} }'
