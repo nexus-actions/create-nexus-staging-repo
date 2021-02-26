@@ -1,11 +1,6 @@
 #!/bin/sh -l
 # inspired by https://gist.github.com/romainbsl/4ab6d8c1e92d3f916eaacf77eb27e361
 
-if [ -z $INPUT_BASE_URL ]
-then
-  INPUT_BASE_URL="https://oss.sonatype.org/service/local/"
-fi
-
 jsonOutput=$(
   curl -s --request POST -u "$INPUT_USERNAME:$INPUT_PASSWORD" \
     --url ${INPUT_BASE_URL}staging/profiles/"${INPUT_STAGING_PROFILE_ID}"/start \
