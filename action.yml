@@ -13,10 +13,10 @@ inputs:
   description: 
     description: 'A description to identify the newly created repository'
     required: false
-    defaults: "Created with Github Actions"
+    default: 'Created with Github Actions'
   base_url: 
     description: 'The url of your nexus repository, defaults to OSSRH (https://oss.sonatype.org/service/local/)'
-    defaults: https://oss.sonatype.org/service/local/
+    default: 'https://oss.sonatype.org/service/local/'
 outputs:
   repository-id: 
     description: 'The ID of the newly created staging repository'
