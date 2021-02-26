@@ -15,5 +15,5 @@ if [ -z "$stagingRepositoryId" ]; then
   echo "Error while creating the staging repository."
   exit 1
 else
-  echo "::set-output name=repository-id::$stagingRepositoryId"
+  echo "::set-output name=repository_id::$stagingRepositoryId"
 fi
