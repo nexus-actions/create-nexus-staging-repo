@@ -35,7 +35,7 @@ See the [nexus-actions-demo](https://github.com/nexus-actions/nexus-actions-demo
 
 ----------
 
-# Brought to you by ...
+# This action is brought to you by ...
 
 - Martin Bonnin from [Apollo GraphQL](https://www.apollographql.com)
 - Romain Boisselle from [Kodein Koders](https://kodein.net)

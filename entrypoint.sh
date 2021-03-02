@@ -9,11 +9,11 @@ jsonOutput=$(
     --data '{ "data": {"description" : "'"$INPUT_DESCRIPTION"'"} }'
 )
 
-stagedRepositoryId=$(echo "$jsonOutput" | jq -r '.data.stagedRepositoryId')
+stagingRepositoryId=$(echo "$jsonOutput" | jq -r '.data.stagedRepositoryId')
 
-if [ -z "$stagedRepositoryId" ]; then
+if [ -z "$stagingRepositoryId" ]; then
   echo "Error while creating the staging repository."
   exit 1
 else
-  echo "::set-output name=repository-id::$stagedRepositoryId"
+  echo "::set-output name=repository_id::$stagingRepositoryId"
 fi

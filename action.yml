@@ -19,7 +19,7 @@ inputs:
     required: true
     default: 'https://oss.sonatype.org/service/local/'
 outputs:
-  repository-id: 
+  repository_id: 
     description: 'The ID of the newly created staging repository'
 runs:
   using: 'docker'
