@@ -16,6 +16,7 @@ inputs:
     default: 'Created with Github Actions'
   base_url: 
     description: 'The url of your nexus repository, defaults to OSSRH (https://oss.sonatype.org/service/local/)'
+    required: true
     default: 'https://oss.sonatype.org/service/local/'
 outputs:
   repository-id: 
