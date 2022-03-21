@@ -15,6 +15,8 @@ jobs:
       repository_id: ${{ steps.create.outputs.repository_id }}
     steps:
       - id: create
+        # replace '@main' with the latest commit sha, see https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions#using-third-party-actions
+
         uses: nexus-actions/create-nexus-staging-repo@main
         with:
           username: ${{ secrets.SONATYPE_USERNAME }}
