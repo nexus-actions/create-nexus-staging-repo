@@ -1,0 +1,14 @@
+inputs:
+  username:
+    type: string
+  password: 
+    type: string
+  staging_profile_id: 
+    type: string
+  description: 
+    type: string
+  base_url: 
+    type: string
+outputs:
+  repository_id: 
+    type: string
