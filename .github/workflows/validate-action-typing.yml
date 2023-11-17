@@ -1,10 +1,10 @@
-name: Validate action typings
+name: Validate action typing
 
 on:
   push:
     paths:
       - 'action.yml'
-      - 'action-typing.yml'
+      - 'action-types.yml'
   workflow_dispatch:
 jobs:
   validate-typings:
