@@ -1,3 +1,5 @@
+Deprecated & archived due to [OSSRH sunset](https://central.sonatype.org/news/20250326_ossrh_sunset/) (June 2025)
+
 # create-nexus-staging-repo Github Action
 
 This action creates a new staging repo so that you can upload all your files without having multiple implicit repos being created and your files in different places
